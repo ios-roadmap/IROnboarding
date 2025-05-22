@@ -2,7 +2,7 @@
 //  IROnboardingDemoApp.swift
 //  IROnboardingDemo
 //
-//  Created by Ömer Faruk Öztürk on 5.05.2025.
+//  Created by Ömer Faruk Öztürk on 22.05.2025.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct IROnboardingDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            IROnboardingThemes()
         }
     }
 }
