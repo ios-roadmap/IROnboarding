@@ -8,38 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		647768C62DDF14A000DD307A /* IROnboardingLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 647768C52DDF14A000DD307A /* IROnboardingLibrary */; };
-		64DAD0502DDF1C400050B7D7 /* IROnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647768AE2DDF123E00DD307A /* IROnboarding.framework */; };
-		64DAD0512DDF1C400050B7D7 /* IROnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 647768AE2DDF123E00DD307A /* IROnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		64DAD0522DDF1C400050B7D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 647768A52DDF123E00DD307A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 647768AD2DDF123E00DD307A;
-			remoteInfo = IROnboarding;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		64DAD0542DDF1C400050B7D7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				64DAD0512DDF1C400050B7D7 /* IROnboarding.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		647768AE2DDF123E00DD307A /* IROnboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IROnboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		647768C32DDF148E00DD307A /* IROnboardingLibrary */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = IROnboardingLibrary; path = ../IROnboardingLibrary; sourceTree = SOURCE_ROOT; };
-		64DAD0412DDF1C360050B7D7 /* IROnboardingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IROnboardingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -61,11 +34,6 @@
 			path = IROnboarding;
 			sourceTree = "<group>";
 		};
-		64DAD0422DDF1C360050B7D7 /* IROnboardingDemo */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = IROnboardingDemo;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +45,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64DAD03E2DDF1C360050B7D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64DAD0502DDF1C400050B7D7 /* IROnboarding.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,7 +53,6 @@
 			children = (
 				647768C32DDF148E00DD307A /* IROnboardingLibrary */,
 				647768B02DDF123E00DD307A /* IROnboarding */,
-				64DAD0422DDF1C360050B7D7 /* IROnboardingDemo */,
 				647768C42DDF14A000DD307A /* Frameworks */,
 				647768AF2DDF123E00DD307A /* Products */,
 			);
@@ -103,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				647768AE2DDF123E00DD307A /* IROnboarding.framework */,
-				64DAD0412DDF1C360050B7D7 /* IROnboardingDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,30 +110,6 @@
 			productReference = 647768AE2DDF123E00DD307A /* IROnboarding.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		64DAD0402DDF1C360050B7D7 /* IROnboardingDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 64DAD04F2DDF1C370050B7D7 /* Build configuration list for PBXNativeTarget "IROnboardingDemo" */;
-			buildPhases = (
-				64DAD03D2DDF1C360050B7D7 /* Sources */,
-				64DAD03E2DDF1C360050B7D7 /* Frameworks */,
-				64DAD03F2DDF1C360050B7D7 /* Resources */,
-				64DAD0542DDF1C400050B7D7 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				64DAD0532DDF1C400050B7D7 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				64DAD0422DDF1C360050B7D7 /* IROnboardingDemo */,
-			);
-			name = IROnboardingDemo;
-			packageProductDependencies = (
-			);
-			productName = IROnboardingDemo;
-			productReference = 64DAD0412DDF1C360050B7D7 /* IROnboardingDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,9 +123,6 @@
 					647768AD2DDF123E00DD307A = {
 						CreatedOnToolsVersion = 16.0;
 						LastSwiftMigration = 1600;
-					};
-					64DAD0402DDF1C360050B7D7 = {
-						CreatedOnToolsVersion = 16.0;
 					};
 				};
 			};
@@ -210,20 +141,12 @@
 			projectRoot = "";
 			targets = (
 				647768AD2DDF123E00DD307A /* IROnboarding */,
-				64DAD0402DDF1C360050B7D7 /* IROnboardingDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		647768AC2DDF123E00DD307A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64DAD03F2DDF1C360050B7D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -240,22 +163,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64DAD03D2DDF1C360050B7D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		64DAD0532DDF1C400050B7D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 647768AD2DDF123E00DD307A /* IROnboarding */;
-			targetProxy = 64DAD0522DDF1C400050B7D7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		647768B52DDF123E00DD307A /* Debug */ = {
@@ -469,84 +377,6 @@
 			};
 			name = Release;
 		};
-		64DAD04D2DDF1C370050B7D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = IROnboardingDemo/IROnboardingDemo.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"IROnboardingDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = 8W2QVSMGJ3;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosroadmap.IROnboardingDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		64DAD04E2DDF1C370050B7D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = IROnboardingDemo/IROnboardingDemo.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"IROnboardingDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = 8W2QVSMGJ3;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.iosroadmap.IROnboardingDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,15 +394,6 @@
 			buildConfigurations = (
 				647768B52DDF123E00DD307A /* Debug */,
 				647768B62DDF123E00DD307A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		64DAD04F2DDF1C370050B7D7 /* Build configuration list for PBXNativeTarget "IROnboardingDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				64DAD04D2DDF1C370050B7D7 /* Debug */,
-				64DAD04E2DDF1C370050B7D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
