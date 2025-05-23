@@ -8,11 +8,13 @@
 import SwiftUI
 import IRStyleKit
 
-struct WelcomeTourView: View {
+public struct WelcomeTourView: View {
     @State var showSignInView: Bool = false
     
-    var body: some View {
-        NavigationStack {
+    @StateObject private var router = WelcomeTourRouter()
+    
+    public var body: some View {
+        NavigationStack(path: $router.path) {
             VStack {
                 AsyncImageView()
                     .ignoresSafeArea(.all, edges: .top)
@@ -23,8 +25,10 @@ struct WelcomeTourView: View {
                 ctaButton
                     .padding(16)
                 
-                policyLinks
-                
+                PolicyLinksView(
+                    termsURLString: "https://google.com/terms",
+                    privacyURLString: "https://google.com/privacy"
+                )
             }
             .sheet(
                 isPresented: $showSignInView,
@@ -32,18 +36,31 @@ struct WelcomeTourView: View {
                     Text("ÖMER")
                         .presentationDetents([.medium])
             })
+            .navigationDestination(for: WelcomeTourRoute.self) { newValue in
+                switch newValue {
+                case .intro:
+                    WelcomeTourIntroView()
+                        .environmentObject(router)
+                case .completed:
+                    WelcomeTourCompletedView()
+                }
+            }
         }
     }
     
     private var titleSection: some View {
         VStack {
             Text("iOSRoadmap")
-                .font(.largeTitle)
-                .fontWeight(.semibold)
+                .anyTextStyle(
+                    font: .largeTitle,
+                    weight: .semibold
+                )
             
             Text("Master iOS: From A to Z")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+                .anyTextStyle(
+                    font: .caption,
+                    color: Color.secondary
+                )
         }
     }
     
@@ -51,36 +68,29 @@ struct WelcomeTourView: View {
         VStack(spacing: 8) {
             Text("Get Started")
                 .callToActionButtonDesign()
-                .anyButton(option: .rotate(.spin)) {
-                    
+                .anyButton(option: .plain) {
+                    ctaPressed()
                 }
             
             Text("Already have an account? Sign in!")
                 .underlineTextButtonDesign()
                 .anyButton {
-                    showSignInView = true
+                    signInPressed()
                 }
         }
     }
     
-    private var policyLinks: some View {
-        HStack(spacing: 8) {
-            Link(destination: .init(string: "google.com")!) {
-                Text("Terms of Service")
-            }
-            
-            Circle()
-                .fill(Color.accent)
-                .frame(width: 4, height: 4)
-            
-            Link(destination: .init(string: "google.com")!) {
-                Text("Privacy Policy")
-            }
-        }
+    func ctaPressed() {
+        router.push(.intro)
+    }
+    
+    func signInPressed() {
+        showSignInView = true
     }
 }
 
 #Preview {
-    WelcomeTourView()
-        .background(Color.green.opacity(0.25))
+    NavigationStack {
+        WelcomeTourView()
+    }
 }

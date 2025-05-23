@@ -13,10 +13,16 @@ let package = Package(
             targets: ["IROnboarding"]
         ),
     ],
+    dependencies: [
+        .package(name: "IRStyleKit", path: "../../Packages/IRStyleKit")
+    ],
     targets: [
         .target(
             name: "IROnboarding",
-            dependencies: []
+            dependencies: [
+                "IRStyleKit"
+            ],
+            path: "IROnboarding"
         )
     ]
 )

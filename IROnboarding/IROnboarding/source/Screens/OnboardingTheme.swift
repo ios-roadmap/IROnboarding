@@ -8,6 +8,7 @@
 import SwiftUI
 
 /// Represents various onboarding theme types used in mobile apps.
+@MainActor
 public enum OnboardingTheme {
     /// 3-5 ekranlık sağa kaydırmalı karşılama turu
     case welcomeTour
