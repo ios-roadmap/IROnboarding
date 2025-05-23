@@ -16,7 +16,9 @@ public struct WelcomeTourView: View {
     public var body: some View {
         NavigationStack(path: $router.path) {
             VStack {
-                AsyncImageView()
+//                AsyncImageView()
+                Image(uiImage: .iOSRoadmap)
+                    .resizable()
                     .ignoresSafeArea(.all, edges: .top)
                 
                 titleSection
