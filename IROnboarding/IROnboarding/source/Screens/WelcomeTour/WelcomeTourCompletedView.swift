@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct WelcomeTourCompletedView: View {
+    
+    let selectedColor: Color?
+    
+    init(selectedColor: Color? = nil) {
+        self.selectedColor = selectedColor
+    }
+    
     var body: some View {
         Text("Completed")
             .navigationTitle("Well Done!")

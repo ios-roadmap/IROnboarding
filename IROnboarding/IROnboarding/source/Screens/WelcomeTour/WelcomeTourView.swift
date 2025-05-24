@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import IRStyleKit
+internal import IRStyleKit
 
 public struct WelcomeTourView: View {
     @State var showSignInView: Bool = false
@@ -41,10 +41,32 @@ public struct WelcomeTourView: View {
             .navigationDestination(for: WelcomeTourRoute.self) { newValue in
                 switch newValue {
                 case .intro:
-                    WelcomeTourIntroView()
+                    let text = "Make your own avatars and chat with them!\n\nHave real conversation with AI generated responses."
+                    
+                    WelcomeTourIntroView(
+                        text: text,
+                        keywords: [
+                            "avatars",
+                            "real conversation"
+                        ],
+                        buttonName: "Continue"
+                    )
+                    .environmentObject(router)
+                case .colorTheme:
+                    ColorThemeView(
+                        palette: [
+                            .red, .green, .orange, .blue, .mint, .purple, .cyan, .teal, .indigo
+                        ],
+                        onContinue: { color in
+                            router.push(.completed(color))
+                        }
+                    )
                         .environmentObject(router)
-                case .completed:
-                    WelcomeTourCompletedView()
+                case .completed(color: let color):
+                    WelcomeTourCompletedView(
+                        selectedColor: color
+                    )
+                    .environmentObject(router)
                 }
             }
         }
