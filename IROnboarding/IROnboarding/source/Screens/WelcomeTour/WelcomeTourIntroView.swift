@@ -17,7 +17,8 @@ struct WelcomeTourIntroView: View {
     
     var body: some View {
         VStack(spacing: 24) {
-            Text(text.highlightedAttributedString(keywords))
+            Text(text)
+            
                 .baselineOffset(6)
                 .frame(maxHeight: .infinity)
             

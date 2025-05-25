@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+internal import IRCore
+internal import IRStyleKit
 
 struct WelcomeTourCompletedView: View {
+    
+    @Environment(AppState.self) private var appState
     
     let selectedColor: Color?
     
@@ -16,12 +20,40 @@ struct WelcomeTourCompletedView: View {
     }
     
     var body: some View {
-        Text("Completed")
-            .navigationTitle("Well Done!")
-            .navigationBarTitleDisplayMode(.inline)
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Setup complete!")
+                .anyTextStyle(
+                    font: .largeTitle,
+                    weight: .semibold,
+                    color: selectedColor ?? Color.accent
+                )
+            
+            Text("We've set up your profile and you're ready to start chatting.")
+                .anyTextStyle(
+                    font: .title,
+                    weight: .medium
+                )
+        }
+        .frame(maxHeight: .infinity)
+        .safeAreaInset(edge: .bottom) {
+            CustomizableButton(
+                name: "Finish",
+                handler: {
+                    onFinishButtonPressed()
+                })
+            .padding(16)
+        }
+        .toolbar(.hidden, for: .navigationBar)
+    }
+    
+    private func onFinishButtonPressed() {
+        appState.updateDashboardVisibility(to: true)
     }
 }
 
 #Preview {
-    WelcomeTourCompletedView()
+    NavigationStack {
+        WelcomeTourCompletedView(selectedColor: .orange)
+            .environment(AppState())
+    }
 }

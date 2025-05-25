@@ -28,6 +28,7 @@ struct ColorThemeView: View {
     var body: some View {
         ScrollView {
             ColorGridView(selectedColor: $selectedColor, colors: palette)
+                .padding(16)
         }
         .safeAreaInset(edge: .bottom) {
             if let colour = selectedColor {

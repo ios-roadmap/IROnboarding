@@ -13,12 +13,14 @@ public struct WelcomeTourView: View {
     
     @StateObject private var router = WelcomeTourRouter()
     
+    public init() { }
+    
     public var body: some View {
         NavigationStack(path: $router.path) {
             VStack {
-//                AsyncImageView()
-                Image(uiImage: .iOSRoadmap)
-                    .resizable()
+                AsyncImageView()
+//                Image(uiImage: .iOSRoadmap)
+//                    .resizable()
                     .ignoresSafeArea(.all, edges: .top)
                 
                 titleSection
